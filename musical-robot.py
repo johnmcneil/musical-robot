@@ -7,22 +7,16 @@ import certifi
 
 baseURL = 'https://www.classicalmpr.org/topic/daily-download'
 fullURL = 'http://download.publicradio.org/podcast/minnesota/classical/programs/free-downloads/2020/09/07/daily_download_20200907_128.mp3'
-destinationFile = "robot-music.mp3", "wb"
-file = open('pycurl.md', 'wb')
+destination_file = open('robot-music.txt', 'wb')
+
 
 b_obj = BytesIO()
 crl = pycurl.Curl()
-
 crl.setopt(crl.CAINFO, certifi.where())
 
 
 # url
-crl.setopt(crl.URL, fullURL)
-crl.setopt(crl.WRITEDATA, file)
+crl.setopt(crl.URL, baseURL)
+crl.setopt(crl.WRITEDATA, destination_file)
 crl.perform()
 crl.close()
-
-
-get_body = b_obj.getvalue()
-
-print('Output of GET request:\n%s' % get_body.decode('utf8')) 
