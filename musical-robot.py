@@ -8,7 +8,6 @@ import certifi
 import datetime
 
 
-
 baseURL = 'https://www.classicalmpr.org/topic/daily-download'
 fullURL = 'http://download.publicradio.org/podcast/minnesota/classical/programs/free-downloads/2020/08/13/daily_download_20200813_128.mp3'
 
