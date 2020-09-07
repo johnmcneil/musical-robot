@@ -7,16 +7,16 @@ destinationFile = "robot-music.mp3", "wb"
 # https://stackabuse.com/using-curl-in-python-with-pycurl/
 
 
-
 b_obj = BytesIO()
 crl = pycurl.Curl()
 
 # url
 crl.setopt(crl.URL, 'fullURL')
 
-crl.setopt(crl.WRITEDATA, destinationFile)
+crl.setopt(crl.WRITEDATA, 'destinationFile')
 
 
 crl.perform()
 
 crl.close()
+
