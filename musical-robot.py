@@ -17,7 +17,11 @@ destination_filename = destination_filename_base + date_str + '_128.mp3'
 path = 'G:\Music\Classical MPR Daily Download\\' + destination_filename + '_scratch'
 
 baseURL = 'https://www.classicalmpr.org/topic/daily-download'
-fullURL = 'https://download.publicradio.org/podcast/minnesota/classical/programs/free-downloads/' + date_str_url + destination_filename
+fullURL = 'http://download.publicradio.org/podcast/minnesota/classical/programs/free-downloads/' + date_str_url + destination_filename
+
+# this url might work better...
+# https://feeds.feedburner.com/YourClassicalDailyDownload
+feedburnerURL = 'http://feedproxy.google.com/~r/YourClassicalDailyDownload/~5/TycEQoxorbM/daily_download_20200908_128.mp3'
 
 print(fullURL)
 
